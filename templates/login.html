@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    {% include "header.html" %}
+
+<body>
+
+    {% include "navbar.html" %}
+
+    <div class="container">
+        <form class="text-center border border-light p-5 mt-5" method="post">
+
+          <p class="h4 mb-4">Se connecter</p>
+
+          <!-- Email -->
+          <input type="email" name="login" class="form-control mb-4" placeholder="E-mail">
+
+          <!-- Password -->
+          <input type="password" name="password" class="form-control mb-4" placeholder="Password">
+
+          <!-- Sign in button -->
+          <button class="btn btn-info btn-block my-4 waves-effect waves-light" type="submit">Se connecter</button>
+
+          <!-- Register -->
+          <p>Pas inscrit ?
+            <a href="{{ url_for('register') }}">S'inscrire</a>
+          </p>
+
+        </form>
+    </div>
+
+    {% include "footer.html" %}
+
+    {% include "scripts.html" %}
+
+</body>
+</html>
+
+
