@@ -2,7 +2,7 @@
 
   <section class="text-center py-5">
 
-    <p class="mb-4 pb-2 lead font-weight-bold">Trusted by 1 000 000 + developers &amp; designers</p>
+    <p class="mb-4 pb-2 lead font-weight-bold">Matériaux de qualités reconnus par les plus grandes entreprises !</p>
 
     <!-- Logo carousel -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1800">
@@ -126,23 +126,25 @@
   <!-- Footer Elements -->
   <div class="container-fluid">
 
+    {% if not session.get("email"): %}
     <!-- Call to action -->
     <ul class="list-unstyled list-inline text-center py-2">
       <li class="list-inline-item">
-        <h5 class="mb-1">Register for free</h5>
+        <h5 class="mb-1">S'inscrire gratuitement</h5>
       </li>
       <li class="list-inline-item">
-        <a href="#!" class="btn btn-outline-white">Sign up!</a>
+        <a href="/register" class="btn btn-outline-white">S'inscrire !</a>
       </li>
     </ul>
     <!-- Call to action -->
+    {% endif %}
 
   </div>
   <!-- Footer Elements -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="/"> Pottery.com</a>
   </div>
   <!-- Copyright -->
 

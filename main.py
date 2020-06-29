@@ -4,13 +4,11 @@ import sqlite3
 from flask import Flask, render_template, g, request, flash, url_for, session
 from werkzeug.utils import redirect
 
-
 app = Flask(__name__)
 
-app.secret_key = "stevensuce"
+app.secret_key = "pottery"
 
 DATABASE = 'database.db'
-
 
 """
 #
@@ -103,7 +101,7 @@ def register():
             cur = conn.cursor()
             cur.execute(
                 'SELECT * FROM users WHERE email = ?',
-                (request.form["login"], )
+                (request.form["login"],)
             )
             user = cur.fetchone()
 
