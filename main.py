@@ -46,8 +46,7 @@ def root():
         cur.execute("SELECT * FROM items")
         item_data = cur.fetchall()
     conn.close()
-    items = parse(item_data)
-    return render_template("index.html", title="Accueil", items=items, session=session)
+    return render_template("index.html", title="Accueil", items=item_data, session=session)
 
 
 @app.route("/login", methods=["POST", "GET"])
@@ -95,9 +94,9 @@ def register():
         return redirect(url_for("root"))
 
     if (
-        "login" in request.form
-        and "password" in request.form
-        and "password2" in request.form
+            "login" in request.form
+            and "password" in request.form
+            and "password2" in request.form
     ):
 
         if request.form["password"] != request.form["password2"]:
@@ -126,27 +125,6 @@ def register():
 
     else:
         return render_template("register.html", title="S'inscrire", session=session)
-
-
-"""
-#
-# PARSING DATABASE RESULTS
-#
-"""
-
-
-def parse(data):
-    ans = []
-    i = 0
-    while i < len(data):
-        curr = []
-        for j in range(7):
-            if i >= len(data):
-                break
-            curr.append(data[i])
-            i += 1
-        ans.append(curr)
-    return ans
 
 
 if __name__ == "__main__":

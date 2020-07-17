@@ -44,42 +44,40 @@ i
         <section class="text-center">
             <div class="row">
 
-                {% for item_data in items %}
-                    {% for row in item_data %}
+                {% for row in items %}
 
-                    <div class="col-lg-4 col-md-12 mb-4">
-                                <!-- Card -->
-                        <div class="card">
+                <div class="col-lg-4 col-md-12 mb-4">
+                            <!-- Card -->
+                    <div class="card">
 
-                            <!-- Card image -->
-                            <div class="view overlay">
-                                <img class="card-img-top"
-                                     src={{ url_for('static', filename=row[6]) }}
-                                     alt="Card image cap">
-                                <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top"
+                                 src={{ url_for('static', filename=row[6]) }}
+                                 alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
 
-                            <!-- Card content -->
-                            <div class="card-body">
-                                <p class="mb-1"><a href="" class="font-weight-bold black-text">{{row[1]}}</a></p>
+                        <!-- Card content -->
+                        <div class="card-body">
+                            <p class="mb-1"><a href="" class="font-weight-bold black-text">{{row[1]}}</a></p>
 
-                                <p class="mb-1"><strong>{{row[2]}}</strong></p>
+                            <p class="mb-1"><strong>{{row[2]}} €</strong></p>
 
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm px-3">Ajouter au panier</button>
-                                <button type="button" class="btn btn-outline-black btn-rounded btn-sm px-3 waves-effect">
-                                    En savoir plus
-                                </button>
-
-                            </div>
+                            <button type="button" class="btn btn-danger btn-rounded btn-sm px-3">Ajouter au panier</button>
+                            <button type="button" class="btn btn-outline-black btn-rounded btn-sm px-3 waves-effect">
+                                En savoir plus
+                            </button>
 
                         </div>
 
                     </div>
 
-			        {% endfor %}
-	            {% endfor %}
+                </div>
+
+                {% endfor %}
 
             </div>
         </section>
