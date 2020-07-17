@@ -11,3 +11,7 @@ List of done features:
 * Require python 3.8 on your device
 * Run main.py
 * Then go to http://127.0.0.1:5000/ in a browser
+
+## Authors
+* FORNASIER Quentin
+* DOUILLET Steven
